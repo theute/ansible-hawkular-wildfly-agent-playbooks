@@ -50,7 +50,6 @@
 - name: Run the Hawkular WildFly Agent installer
   with_items: "{{wildfly_home_dir}}"
   become: true
-  become_user: "root"
   command:
     "java -jar {{hawkular_download_tmpdir}}/hawkular-wildfly-agent-installer.jar
       {{tmp_subsystem_snippet_option|default('')}}
