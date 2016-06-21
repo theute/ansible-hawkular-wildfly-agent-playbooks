@@ -20,8 +20,6 @@
 - hosts: wildfly-servers
 
   tasks:
-    - name: Replace "Local" name
-      replace: dest= "{{ discover.stdout_lines}}/standalone/configuration/standalone.xml" regexp="name=\"Local\"" replace="name=\"FooBar\""
     - name: Restart jboss-as Service
       become: true
       service:
