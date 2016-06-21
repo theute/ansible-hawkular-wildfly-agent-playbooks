@@ -62,7 +62,7 @@
       --tenant-id={{hawkular_wildfly_agent_tenant_id}}"
 
 - name: Replace "Local" name
-  replace: dest= "{{ wildfly_home_dir }}/standalone/configuration/standalone.xml" regexp="name=\"Local\"" replace="name=\"FooBar\""
+  replace: dest="{{ wildfly_home_dir }}/standalone/configuration/standalone.xml" regexp="name=\"Local\"" replace="name=\"FooBar\""
 
 
 - name: Remove the Hawkular WildFly Agent installer
