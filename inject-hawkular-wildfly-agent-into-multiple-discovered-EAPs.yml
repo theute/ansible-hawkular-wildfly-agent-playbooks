@@ -18,6 +18,14 @@
 
 ---
 - hosts: wildfly-servers
+
+  tasks:
+    - name: Restart jboss-as Service
+      become: true
+      service:
+        name: "jboss-eap-rhel"
+        state: restarted
+
   roles:
     - discover-wildfly
     - { role: fetch-and-install-hawkular-wildfly-agent, wildfly_home_dir: "{{ discover.stdout_lines}}" }

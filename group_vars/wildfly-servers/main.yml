@@ -43,7 +43,7 @@ hawkular_wildfly_agent_password: "T0tototo_"
 
 # If the agent is to run in metrics only mode, a tenant ID must also be set
 hawkular_wildfly_agent_metrics_only: "false"
-hawkular_wildfly_agent_tenant_id:    "hawkular"
+hawkular_wildfly_agent_tenant_id:    ""
 
 # For the agent to autogenerate its own feed ID, set this to an empty value
 hawkular_wildfly_agent_feed_id:  "{{ansible_default_ipv4.address}}"

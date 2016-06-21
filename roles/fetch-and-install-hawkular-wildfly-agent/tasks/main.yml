@@ -61,6 +61,6 @@
       --metrics-only={{hawkular_wildfly_agent_metrics_only}}
       --tenant-id={{hawkular_wildfly_agent_tenant_id}}"
 
-#- name: Remove the Hawkular WildFly Agent installer
-#  file: path="{{hawkular_download_tmpdir}}" state=absent
+- name: Remove the Hawkular WildFly Agent installer
+  file: path="{{hawkular_download_tmpdir}}" state=absent
 
